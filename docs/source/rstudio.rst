@@ -1,33 +1,34 @@
-RStudio
-=====
+Exercise 2: RStudio
+===================
 
-.. _installation:
+Install RStudio. RStudio is a powerful and user-friendly environment for R and Python data science.
 
-Installation
-------------
-
-To use Lumache, first install it using pip:
+#. Prepare the virtual machine
 
 .. code-block:: console
 
-   (.venv) $ pip install lumache
+   $ sudo dnf update
+   $ sudo dnf install epel-release
+   $ sudo dnf config-manager --set-enabled crb
 
-Creating recipes
-----------------
+#. Install R
 
-To retrieve a list of random ingredients,
-you can use the ``lumache.get_random_ingredients()`` function:
+.. code-block:: console
+   $ sudo dnf install
+   
+Dependency Tree:
 
-.. autofunction:: lumache.get_random_ingredients
+.. code-block:: bash
+   ....
+	Transaction Summary
+	================================================================================
+	Install  544 Packages
+	
+	Total download size: 540 M
+	Installed size: 1.4 G
+	Is this ok [y/N]: y
 
-The ``kind`` parameter should be either ``"meat"``, ``"fish"``,
-or ``"veggies"``. Otherwise, :py:func:`lumache.get_random_ingredients`
-will raise an exception.
+Check the installed version
 
-.. autoexception:: lumache.InvalidKindError
-
-For example:
-
->>> import lumache
->>> lumache.get_random_ingredients()
-['shells', 'gorgonzola', 'parsley']
+.. code-block:: console
+   $ R --version
