@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'Intro to Cloud and VM'
+copyright = '2024, M Tang'
+author = 'M Tang'
 
 release = '0.1'
 version = '0.1.0'
