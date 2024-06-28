@@ -1,4 +1,4 @@
-JupyterLab
+Exercise 3: JupyterLab
 =====
 
 Install JupyterLab. JupyterLab is an extensible environment for interactive and reproducible computing, based on the Jupyter Notebook and Architecture.
@@ -36,7 +36,15 @@ Install JupyterLab. JupyterLab is an extensible environment for interactive and 
    pip install --upgrade pip
    pip install jupyterlab
 
-5. Start JupyterLab
+5. Update the Firewall
+
+.. code-block:: bash
+
+   sudo firewall-cmd --permanent --add-port=8888/tcp
+   sudo firewall-cmd --reload
+   sudo firewall-cmd --list-all
+
+6. Start JupyterLab
 
 JupyterLab should open via your web browser. If it doesn't open, go to http://<Floating IP>:8888 with your web browser
 

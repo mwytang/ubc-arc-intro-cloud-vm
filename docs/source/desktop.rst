@@ -1,34 +1,49 @@
-Usage
+Exercise 4: Remote Desktop
 =====
 
-.. _installation:
+Enable the remote desktop experience.
 
-Installation
-------------
+1. Prepare the virtual machine
 
-To use Lumache, first install it using pip:
+.. code-block:: bash
 
-.. code-block:: console
+   sudo dnf install epel-release
 
-   (.venv) $ pip install lumache
+2. Set up the Workstation environment
 
-Creating recipes
-----------------
+.. code-block:: bash
 
-To retrieve a list of random ingredients,
-you can use the ``lumache.get_random_ingredients()`` function:
+   sudo dnf group install "Workstation"
 
-.. autofunction:: lumache.get_random_ingredients
+3. Set the graphical mode
 
-The ``kind`` parameter should be either ``"meat"``, ``"fish"``,
-or ``"veggies"``. Otherwise, :py:func:`lumache.get_random_ingredients`
-will raise an exception.
+.. code-block:: bash
 
-.. autoexception:: lumache.InvalidKindError
+   sudo systemctl set-default graphical
 
-For example:
+3. Set the graphical mode
 
->>> import lumache
->>> lumache.get_random_ingredients()
-['shells', 'gorgonzola', 'parsley']
+.. code-block:: bash
 
+   sudo systemctl set-default graphical
+
+4. Update the Firewall
+
+.. code-block:: bash
+
+   sudo firewall-cmd --permanent --add-port=3389/tcp
+   sudo firewall-cmd --reload
+   sudo firewall-cmd --list-all
+
+5. Create a new user
+
+.. code-block:: bash
+
+   sudo useradd johnsmith
+   sudo passwd johnsmith
+
+6. Reboot the virtual machine
+
+.. code-block:: bash
+
+   sudo reboot
