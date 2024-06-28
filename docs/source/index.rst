@@ -19,6 +19,20 @@ For the exercises in this workshop, a virtual machine with the following configu
 * Memory: 3 GB
 * Operating System: Rocky 9
 
+Connect to the Virtual Machine
+------------------------------
+
+.. code-block:: bash
+
+   ssh -i /path/to/private/key/<key>.pem rocky@<public ip>
+
+If using Windows Subsystem for Linux, you may need update the permissions
+
+
+.. code-block:: bash
+
+   chmod 600 <name of private key file>
+
 Exercises
 --------
 .. toctree::
