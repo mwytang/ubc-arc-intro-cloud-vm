@@ -5,7 +5,7 @@ Install RStudio. RStudio is a powerful and user-friendly environment for R and P
 
 1. Prepare the virtual machine
 
-.. code-block:: console
+.. code-block:: bash
 
    $ sudo dnf update
    $ sudo dnf install epel-release
@@ -13,26 +13,26 @@ Install RStudio. RStudio is a powerful and user-friendly environment for R and P
 
 2. Install R
 
-.. code-block:: console
+.. code-block:: bash
 
    $ sudo dnf install R
 
 3. Check the installed version of R
 
-.. code-block:: console
+.. code-block:: bash
 
    $ R --version
 
 4. Install OpenSSL 1.1.0
 
-.. code-block:: console
+.. code-block:: bash
 
    $ sudo yum install -y make gcc perl-core pcre-devel wget zlib-devel
    $ wget https://www.openssl.org/source/openssl-1.1.0i.tar.gz
    $ tar -zxf openssl-1.1.0i.tar.gz
    $ cd openssl-1.1.0i
 
-.. code-block:: console
+.. code-block:: bash
 
    $ ./config
    $ make test
@@ -41,7 +41,7 @@ Install RStudio. RStudio is a powerful and user-friendly environment for R and P
 
 5. Export the PATH
 
-.. code-block:: console
+.. code-block:: bash
 
    $ export LD_LIBRARY_PATH=/usr/local/lib:/usr/local/lib64
    $ echo "export LD_LIBRARY_PATH=/usr/local/lib:/usr/local/lib64" >> ~/.bashrc
@@ -49,13 +49,13 @@ Install RStudio. RStudio is a powerful and user-friendly environment for R and P
 
 6. Check the installed version
 
-.. code-block:: console
+.. code-block:: bash
 
    $ openssl version
 
 7. Install RStudio
 
-.. code-block:: console
+.. code-block:: bash
 
    $ wget https://download2.rstudio.org/server/rhel9/x86_64/rstudio-server-rhel-2024.04.2-764-x86_64.rpm
    $ sudo yum install rstudio-server-rhel-2024.04.2-764-x86_64
@@ -64,7 +64,7 @@ Install RStudio. RStudio is a powerful and user-friendly environment for R and P
 
 8. Update the firewall
 
-.. code-block:: console
+.. code-block:: bash
 
    $ sudo firewall-cmd --permanent --add-port=8787/tcp
    $ sudo firewall-cmd --reload
@@ -74,9 +74,9 @@ Install RStudio. RStudio is a powerful and user-friendly environment for R and P
 
 9. Create a new user
 
-.. code-block:: console
+.. code-block:: bash
 
    $ sudo useradd johnsmith
-   $ passwd rock
+   $ sudo passwd rock
 
 9. Login to http://<Floating IP>:8787 with your preferred web browser

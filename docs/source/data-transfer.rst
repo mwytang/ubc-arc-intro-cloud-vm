@@ -1,6 +1,14 @@
 Exercise 1: Data Transfer
 =====
 
-.. code-block:: console
+1. In the same folder as your Private Key, create a text file
 
-   $ scp -i <ssh-key>.pem <file name> <username>@<IP Address>:/home/<username>
+.. code-block:: bash
+
+  vi helloworld.txt
+
+2. Transfer the text file to your virtual machine
+
+.. code-block:: bash
+
+  scp -i <ssh-key>.pem helloworld.txt rocky@<IP Address>:/home/rocky
