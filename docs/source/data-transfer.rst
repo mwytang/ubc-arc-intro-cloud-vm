@@ -1,6 +1,8 @@
 Exercise 1: Data Transfer
 =====
 
+Transfer data to the virtual machine.
+
 1. In the same folder as your Private Key, create a text file
 
 .. code-block:: bash

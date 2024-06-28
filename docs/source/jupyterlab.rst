@@ -1,33 +1,45 @@
 JupyterLab
 =====
 
-.. _installation:
+Install JupyterLab. JupyterLab is an extensible environment for interactive and reproducible computing, based on the Jupyter Notebook and Architecture.
 
-Installation
-------------
+1. Prepare the virtual machine
 
-To use Lumache, first install it using pip:
+.. code-block:: bash
 
-.. code-block:: console
+   sudo dnf install wget curl nano unzip yum-utils
 
-   (.venv) $ pip install lumache
+2. Install Nginx
 
-Creating recipes
-----------------
+.. code-block:: bash
 
-To retrieve a list of random ingredients,
-you can use the ``lumache.get_random_ingredients()`` function:
+   sudo vi /etc/yum.repos.d/nginx.repo
+   sudo dnf install nginx
+   nginx -v
+   sudo systemctl enable nginx --now
+   sudo systemctl status nginx
 
-.. autofunction:: lumache.get_random_ingredients
+3. Install the PIP package manager
 
-The ``kind`` parameter should be either ``"meat"``, ``"fish"``,
-or ``"veggies"``. Otherwise, :py:func:`lumache.get_random_ingredients`
-will raise an exception.
+.. code-block:: bash
 
-.. autoexception:: lumache.InvalidKindError
+   sudo dnf install python3-pip
 
-For example:
+4. Install JupyterLab
 
->>> import lumache
->>> lumache.get_random_ingredients()
-['shells', 'gorgonzola', 'parsley']
+.. code-block:: bash
+
+   mkdir jupyterlab
+   cd ~/jupyterlab
+   python3 -m venv --system-site-packages jupyterlab_env
+   source jupyterlab_env/bin/activate
+   pip install --upgrade pip
+   pip install jupyterlab
+
+5. Start JupyterLab
+
+JupyterLab should open via your web browser. If it doesn't open, go to http://<Floating IP>:8888 with your web browser
+
+.. code-block:: bash
+
+   jupyter lab --ip 0.0.0.0
