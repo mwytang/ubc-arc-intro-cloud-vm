@@ -58,6 +58,8 @@ Install JupyterLab. JupyterLab is an extensible environment for interactive and 
 
 .. code-block:: bash
 
+   sudo dnf install firewalld
+   sudo systemctl start firewalld
    sudo firewall-cmd --permanent --add-port=8888/tcp
    sudo firewall-cmd --reload
    sudo firewall-cmd --list-all
