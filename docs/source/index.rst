@@ -8,6 +8,7 @@ Resources
 * **The Alliance Cloud Quick Start:** https://docs.alliancecan.ca/wiki/Cloud_Quick_Start
 * **The Alliance Cloud Status (Health):** https://status.alliancecan.ca/ 
 * **Rapid Access Service (RAS):** https://docs.alliancecan.ca/wiki/Cloud_RAS_Allocations
+* **Arbutus Cloud:** https://arbutus.cloud.computecanada.ca/
 * **Nextcloud:** https://docs.alliancecan.ca/wiki/Nextcloud
 * **UBC ARC Support:** arc.support@ubc.ca 
 
@@ -19,6 +20,13 @@ For the exercises in this workshop, a virtual machine with the following configu
 * Memory: 3 GB
 * Operating System: Rocky 9
 
+Preparation
+---------------
+For the exercises in this workshop, you may need to install:
+
+* **If you are using Windows, MobaXterm:** https://mobaxterm.mobatek.net/download.html (Home Edition)
+* **If you are using Mac OS, Microsoft Remote Desktop:** https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466?mt=12
+
 Connect to the Virtual Machine
 ------------------------------
 
@@ -26,7 +34,7 @@ Connect to the Virtual Machine
 
    ssh -i /path/to/private/key/<key>.pem rocky@<public ip>
 
-If using Windows Subsystem for Linux, you may need update the permissions
+If using Windows Subsystem for Linux, you may need to update the permissions
 
 
 .. code-block:: bash
