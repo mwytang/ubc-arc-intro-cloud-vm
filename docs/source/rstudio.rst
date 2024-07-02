@@ -58,7 +58,7 @@ Install RStudio. RStudio is a powerful and user-friendly environment for R and P
 .. code-block:: bash
 
    wget https://download2.rstudio.org/server/rhel9/x86_64/rstudio-server-rhel-2024.04.2-764-x86_64.rpm
-   sudo yum install rstudio-server-rhel-2024.04.2-764-x86_64
+   sudo yum install rstudio-server-rhel-2024.04.2-764-x86_64.rpm
    sudo systemctl status rstudio-server.service
    sudo systemctl enable rstudio-server.service
 
@@ -66,9 +66,11 @@ Install RStudio. RStudio is a powerful and user-friendly environment for R and P
 
 .. code-block:: bash
 
+   sudo dnf install firewalld
+   sudo systemctl start firewalld
    sudo firewall-cmd --permanent --add-port=8787/tcp
    sudo firewall-cmd --reload
-   semanage fcontext -a -t bin_t '/usr/lib/rstudio-server/bin(/.*)?'
+   sudo semanage fcontext -a -t bin_t '/usr/lib/rstudio-server/bin(/.*)?'
    restorecon -r /usr/lib/rstudio-server/bin/
    systemctl restart rstudio-server
 
