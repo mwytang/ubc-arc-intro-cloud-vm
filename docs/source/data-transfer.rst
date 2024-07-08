@@ -3,11 +3,11 @@ Exercise 1: Data Transfer
 
 Transfer data to the virtual machine.
 
-1. In the same folder as your Private Key, create a text file
+1. In the same folder as your Private Key, create a text file. On Windows, you can Notepad or Notepad++
 
 .. code-block:: bash
 
-  vi helloworld.txt
+  nano helloworld.txt
 
 2. Transfer the text file to your virtual machine
 

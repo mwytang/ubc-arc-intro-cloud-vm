@@ -13,11 +13,7 @@ Install JupyterLab. JupyterLab is an extensible environment for interactive and 
 
 .. code-block:: bash
 
-   sudo vi /etc/yum.repos.d/nginx.repo
-   sudo dnf install nginx
-   nginx -v
-   sudo systemctl enable nginx --now
-   sudo systemctl status nginx
+   sudo nano /etc/yum.repos.d/nginx.repo
 
 .. code-block:: bash
 
@@ -36,6 +32,13 @@ Install JupyterLab. JupyterLab is an extensible environment for interactive and 
    enabled=0
    gpgkey=https://nginx.org/keys/nginx_signing.key
    module_hotfixes=true
+
+.. code-block:: bash
+
+   sudo dnf install nginx
+   nginx -v
+   sudo systemctl enable nginx --now
+   sudo systemctl status nginx
 
 3. Install the PIP package manager
 
