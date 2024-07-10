@@ -71,14 +71,14 @@ Install RStudio. RStudio is a powerful and user-friendly environment for R and P
    sudo firewall-cmd --permanent --add-port=8787/tcp
    sudo firewall-cmd --reload
    sudo semanage fcontext -a -t bin_t '/usr/lib/rstudio-server/bin(/.*)?'
-   restorecon -r /usr/lib/rstudio-server/bin/
-   systemctl restart rstudio-server
+   sudo restorecon -r /usr/lib/rstudio-server/bin/
+   sudo systemctl restart rstudio-server
 
 9. Create a new user
 
 .. code-block:: bash
 
    sudo useradd johnsmith
-   sudo passwd rock
+   sudo passwd johnsmith
 
 9. Login to http://<Floating IP>:8787 with your web browser
