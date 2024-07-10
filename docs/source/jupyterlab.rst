@@ -50,6 +50,7 @@ Install JupyterLab. JupyterLab is an extensible environment for interactive and 
 
 .. code-block:: bash
 
+   cd /home/rocky
    mkdir jupyterlab
    cd ~/jupyterlab
    python3 -m venv --system-site-packages jupyterlab_env

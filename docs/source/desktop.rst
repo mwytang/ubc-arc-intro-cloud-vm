@@ -51,3 +51,5 @@ Enable the remote desktop experience.
 .. code-block:: bash
 
    sudo reboot
+
+8. Connect to the virtual machine with your remote desktop tool - e.g., Remote Desktop Connection, Microsoft Remote Desktop (Mac). Use the IP address for the URL.
